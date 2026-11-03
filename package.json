@@ -1,0 +1,17 @@
+{
+  "name": "quiet-garden",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node gesture.test.js && node visuals.test.js && node art.test.js && node habitat.test.js && node terrain.test.js && node mobile-controls.test.js",
+    "start": "node serve.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "three": "0.186.1"
+  }
+}

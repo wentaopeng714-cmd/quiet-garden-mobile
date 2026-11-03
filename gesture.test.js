@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {analyzeStroke} from './gesture.js';
+const circle=(n=40)=>Array.from({length:n+1},(_,i)=>[180+Math.cos(i/n*Math.PI*2)*40,240+Math.sin(i/n*Math.PI*2)*30]);
+assert.equal(analyzeStroke(circle()).type,'circle');
+assert.equal(analyzeStroke(circle().reverse()).type,'circle');
+assert.equal(analyzeStroke(circle().slice(0,38)).type,'circle');
+assert.equal(analyzeStroke(circle().slice(0,24)).type,'invalid');
+assert.equal(analyzeStroke([[0,0],[1,1]]).type,'tap');
+assert.equal(analyzeStroke(Array.from({length:30},(_,i)=>[i*3,i*2])).type,'invalid');
+assert.equal(analyzeStroke(circle().map(p=>p.map(v=>v*.1))).type,'invalid');
+console.log('7 gesture checks passed');

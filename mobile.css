@@ -1,0 +1,22 @@
+html,body{width:100%;height:100%;overscroll-behavior:none}body{-webkit-tap-highlight-color:transparent}canvas{position:fixed;inset:0;-webkit-touch-callout:none}button,input{touch-action:manipulation}.touch-guide{display:none}.context-info{display:flex;align-items:center}.close-selection{display:none}
+.mobile-layout{user-select:none;-webkit-user-select:none;--dock-height:132px;--dock-bottom:calc(10px + env(safe-area-inset-bottom,0px));--edge-left:max(12px,env(safe-area-inset-left,0px));--edge-right:max(12px,env(safe-area-inset-right,0px))}
+.mobile-layout .panel{background:#fafbf4f2;backdrop-filter:blur(6px)}
+.mobile-layout button{min-width:44px;min-height:44px;font-size:14px;padding:10px 12px;touch-action:manipulation}
+.mobile-layout .view{top:calc(10px + env(safe-area-inset-top,0px));bottom:auto;left:var(--edge-left);right:var(--edge-right);gap:3px;justify-content:space-between;padding:4px;border-radius:16px;z-index:7}
+.mobile-layout .view button{padding:10px 12px;min-height:44px}.mobile-layout #zoom-in,.mobile-layout #zoom-out{font-size:21px;line-height:24px}
+.mobile-layout #hint{top:calc(79px + env(safe-area-inset-top,0px));width:calc(100% - 40px);max-width:500px;white-space:normal;text-align:center;line-height:1.65;font-size:12px;letter-spacing:0}
+.mobile-layout .signature{display:none}
+.mobile-layout .toolbar{bottom:var(--dock-bottom);left:var(--edge-left);right:var(--edge-right);transform:none;width:auto;min-width:0;padding:5px 8px 7px;border-radius:19px;z-index:5;max-height:calc(100dvh - 120px);overflow:auto;overscroll-behavior:contain}
+.mobile-layout .tool-tabs{gap:0;justify-content:stretch;margin:0 2px 4px}.mobile-layout .tool-tabs button{flex:1;border-radius:0;font-size:13px;padding:9px 6px}
+.mobile-layout .tool-group{gap:4px}.mobile-layout .tool-group[hidden]{display:none}.mobile-layout .toolbar [data-kind]{flex:1;min-width:44px;padding:10px 6px;font-size:14px;border-radius:11px}
+.mobile-layout .terrain-options{gap:4px;margin:5px 0 0;padding-top:4px;justify-content:space-between}.mobile-layout .terrain-options button{padding:9px 8px;font-size:13px;min-width:48px}.mobile-layout .terrain-options label{margin:0 3px;font-size:11px}.mobile-layout .terrain-options input{flex:1;min-width:50px;max-width:150px;width:90px;min-height:44px;margin:0;touch-action:pan-x}
+.mobile-layout .terrain-options input::-webkit-slider-thumb{min-width:23px;min-height:23px}.mobile-layout .terrain-options[hidden]{display:none}
+.mobile-layout .touch-guide{display:block;text-align:center;font-size:10px;line-height:19px;color:#929c87;margin-top:3px;letter-spacing:.2px;pointer-events:none}
+.mobile-layout #context{left:var(--edge-left);right:var(--edge-right);top:auto;bottom:calc(var(--dock-bottom) + var(--dock-height) + 8px);max-width:none;gap:3px;padding:6px;border-radius:17px;flex-wrap:wrap;justify-content:stretch;z-index:6}
+.mobile-layout #context .context-info{flex:0 0 100%;min-height:36px;padding-left:5px;gap:5px}.mobile-layout #context .name{display:block;padding:0 5px;font-size:12px;color:#647559}.mobile-layout #context .behavior{display:block;flex:1;border:0;padding:0;font-size:11px;color:#929c87}.mobile-layout #context .close-selection{display:block;min-height:44px;min-width:44px;padding:5px 10px;font-size:22px;color:#929c87}
+.mobile-layout #context>button{flex:1;min-height:44px;min-width:48px;font-size:13px;padding:9px 7px;border-radius:10px;background:#edf0e5}
+.mobile-landscape .toolbar{left:auto;right:var(--edge-right);width:248px;bottom:var(--dock-bottom);padding:5px 7px 7px;max-height:calc(100dvh - env(safe-area-inset-top,0px) - 22px)}
+.mobile-landscape .toolbar [data-kind]{padding:9px 3px;font-size:13px}.mobile-landscape .touch-guide{font-size:9px;line-height:17px}
+.mobile-landscape .view{right:auto;max-width:calc(100% - 284px);width:300px}.mobile-landscape .view button{padding:9px 7px;font-size:13px}.mobile-landscape #hint{left:var(--edge-left);transform:none;top:calc(77px + env(safe-area-inset-top,0px));width:calc(100% - 292px);max-width:none;font-size:11px}
+.mobile-landscape #context{left:auto;right:var(--edge-right);bottom:var(--dock-bottom);width:248px;max-height:calc(100dvh - 24px);overflow:auto}.mobile-landscape.has-selection .toolbar{visibility:hidden;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.panel,#hint{transition:none}}
